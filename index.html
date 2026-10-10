@@ -1,1 +1,2726 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d1a">
 
+    <!-- EDIT: Update the page title and description for your portfolio -->
+    <title>Jan Michael Orcejola | Maintenance Supervisor</title>
+    <meta name="description" content="Professional portfolio of Jan Michael Orcejola, Maintenance Supervisor specializing in industrial maintenance, electrical systems, automation, instrumentation, and maintenance planning in Saudi Arabia.">
+
+    <style>
+        /* =========================================================
+           PERSONAL PORTFOLIO WEBSITE
+           EDIT COLORS: Change the CSS variables below to customize
+           the website's theme.
+        ========================================================= */
+
+        :root {
+            --bg: #080d1a;
+            --bg-soft: #0d1425;
+            --card: #111b30;
+            --card-hover: #16233d;
+            --text: #edf2ff;
+            --muted: #a0aec7;
+            --blue: #5b8cff;
+            --indigo: #8b7aff;
+            --cyan: #54d9e8;
+            --border: rgba(155, 179, 225, 0.15);
+            --gradient: linear-gradient(135deg, #5b8cff, #8b7aff);
+            --shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+            --radius: 18px;
+            --max-width: 1160px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 95px;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(ellipse at 10% 0%, rgba(60, 93, 190, 0.12), transparent 35%),
+                radial-gradient(ellipse at 90% 35%, rgba(110, 72, 190, 0.09), transparent 32%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.13;
+            z-index: -1;
+            background-image: radial-gradient(rgba(140, 166, 220, 0.4) 0.7px, transparent 0.7px);
+            background-size: 28px 28px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button, input, textarea {
+            font: inherit;
+        }
+
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 2px solid var(--cyan);
+            outline-offset: 4px;
+        }
+
+        img, svg {
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 44px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-alt {
+            background: rgba(13, 20, 37, 0.53);
+            border-top: 1px solid rgba(155, 179, 225, 0.05);
+            border-bottom: 1px solid rgba(155, 179, 225, 0.05);
+        }
+
+        .section-heading {
+            margin-bottom: 42px;
+            max-width: 720px;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 13px;
+        }
+
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+        }
+
+        h2 span, .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-heading p,
+        .muted {
+            color: var(--muted);
+        }
+
+        .section-heading p {
+            max-width: 650px;
+        }
+
+        .gradient-line {
+            width: 70px;
+            height: 4px;
+            border-radius: 5px;
+            background: var(--gradient);
+            margin-top: 22px;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(8, 13, 26, 0.9);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-mark {
+            width: 43px;
+            height: 43px;
+            border-radius: 13px;
+            background: var(--gradient);
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            font-size: 1.05rem;
+            color: white;
+            box-shadow: 0 7px 25px rgba(91, 140, 255, 0.25);
+        }
+
+        .brand-name {
+            display: block;
+            font-weight: 800;
+            font-size: 0.97rem;
+            letter-spacing: 0.2px;
+        }
+
+        .brand-role {
+            display: block;
+            font-size: 0.69rem;
+            color: var(--muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.81rem;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--cyan);
+        }
+
+        .nav-links .nav-contact {
+            padding: 9px 16px;
+            color: white;
+            border: 1px solid rgba(91, 140, 255, 0.55);
+            border-radius: 9px;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: rgba(91, 140, 255, 0.13);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            width: 44px;
+            height: 42px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.3rem;
+        }
+
+        /* Buttons */
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 21px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            font-size: 0.9rem;
+            font-weight: 750;
+            cursor: pointer;
+            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--gradient);
+            box-shadow: 0 9px 25px rgba(91, 140, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 13px 30px rgba(91, 140, 255, 0.3);
+        }
+
+        .btn-outline {
+            color: var(--text);
+            border-color: var(--border);
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--blue);
+            background: rgba(91, 140, 255, 0.08);
+        }
+
+        /* Hero */
+
+        .hero {
+            position: relative;
+            padding: 105px 0 90px;
+            min-height: 640px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: 3%;
+            top: 10%;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: rgba(91, 140, 255, 0.08);
+            filter: blur(90px);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(84, 217, 232, 0.25);
+            border-radius: 100px;
+            color: #a4f3f4;
+            background: rgba(84, 217, 232, 0.06);
+            font-size: 0.78rem;
+            margin-bottom: 26px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #4fe0b1;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(79, 224, 177, 0.5);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.6rem, 6vw, 5rem);
+            letter-spacing: -2.8px;
+            margin-bottom: 17px;
+            line-height: 1.08;
+        }
+
+        .hero-title {
+            font-size: clamp(1.08rem, 2.2vw, 1.45rem);
+            color: #c8d6f4;
+            margin-bottom: 22px;
+            font-weight: 650;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-bottom: 32px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 19px;
+            color: var(--muted);
+            font-size: 0.84rem;
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .hero-meta strong {
+            color: var(--cyan);
+        }
+
+        .hero-card-wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-card {
+            position: relative;
+            border: 1px solid rgba(124, 157, 229, 0.25);
+            border-radius: 25px;
+            padding: 29px;
+            background: linear-gradient(145deg, rgba(24, 39, 67, 0.96), rgba(12, 19, 35, 0.97));
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+            background: rgba(91, 140, 255, 0.17);
+            filter: blur(15px);
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            display: grid;
+            place-items: center;
+            border-radius: 23px;
+            background: var(--gradient);
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 21px;
+            box-shadow: 0 10px 30px rgba(91, 140, 255, 0.22);
+        }
+
+        .hero-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 7px;
+        }
+
+        .hero-card > p {
+            color: var(--muted);
+            font-size: 0.88rem;
+            margin-bottom: 22px;
+        }
+
+        .hero-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .hero-stat span {
+            color: var(--muted);
+            font-size: 0.83rem;
+        }
+
+        .hero-stat strong {
+            color: var(--text);
+            text-align: right;
+            font-size: 0.91rem;
+        }
+
+        .mini-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 19px;
+        }
+
+        .tag {
+            font-size: 0.72rem;
+            color: #c4d4ff;
+            border: 1px solid rgba(91, 140, 255, 0.25);
+            border-radius: 7px;
+            padding: 5px 9px;
+            background: rgba(91, 140, 255, 0.07);
+        }
+
+        /* Stats */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .stat-card {
+            padding: 24px 18px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: rgba(17, 27, 48, 0.7);
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 1.7rem;
+            color: var(--cyan);
+            line-height: 1.4;
+        }
+
+        .stat-card span {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        /* General cards */
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            background: linear-gradient(145deg, rgba(17, 27, 48, 0.94), rgba(12, 19, 34, 0.94));
+            border-radius: var(--radius);
+            padding: 27px;
+            transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(91, 140, 255, 0.5);
+            background: linear-gradient(145deg, rgba(22, 35, 61, 0.98), rgba(12, 19, 34, 0.98));
+        }
+
+        .card h3 {
+            font-size: 1.12rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .icon-box {
+            width: 47px;
+            height: 47px;
+            display: grid;
+            place-items: center;
+            border-radius: 13px;
+            background: rgba(91, 140, 255, 0.12);
+            border: 1px solid rgba(91, 140, 255, 0.2);
+            color: var(--cyan);
+            font-size: 1.3rem;
+            margin-bottom: 19px;
+        }
+
+        .about-intro {
+            font-size: 1.04rem;
+            color: #c3cee4;
+            margin-bottom: 22px;
+        }
+
+        .about-copy p {
+            margin-bottom: 17px;
+            color: var(--muted);
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 13px;
+            margin-top: 25px;
+        }
+
+        .about-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #dce5f8;
+            font-size: 0.87rem;
+        }
+
+        .check {
+            color: var(--cyan);
+            font-weight: 900;
+        }
+
+        .highlight-card {
+            padding: 30px;
+            border: 1px solid rgba(91, 140, 255, 0.2);
+            border-radius: var(--radius);
+            background: linear-gradient(150deg, rgba(91, 140, 255, 0.09), rgba(139, 122, 255, 0.035));
+        }
+
+        .highlight-card h3 {
+            margin-bottom: 22px;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            background: rgba(84, 217, 232, 0.1);
+            color: var(--cyan);
+        }
+
+        .highlight-item h4 {
+            font-size: 0.93rem;
+            margin-bottom: 5px;
+        }
+
+        .highlight-item p {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        /* Skills */
+
+        .skill-card {
+            padding: 24px;
+        }
+
+        .skill-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-list {
+            list-style: none;
+            display: grid;
+            gap: 11px;
+            margin-top: 15px;
+        }
+
+        .skill-list li {
+            color: #becbe2;
+            font-size: 0.85rem;
+            padding-left: 17px;
+            position: relative;
+        }
+
+        .skill-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--blue);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-pill {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            background: rgba(17, 27, 48, 0.8);
+            color: #cfdaef;
+            font-size: 0.84rem;
+            transition: all 0.25s;
+        }
+
+        .skill-pill:hover {
+            color: white;
+            border-color: var(--blue);
+            background: rgba(91, 140, 255, 0.13);
+            transform: translateY(-2px);
+        }
+
+        /* Experience */
+
+        .experience-list {
+            position: relative;
+            padding-left: 29px;
+        }
+
+        .experience-list::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            bottom: 10px;
+            left: 6px;
+            width: 2px;
+            background: linear-gradient(var(--blue), rgba(139, 122, 255, 0.12));
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 26px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            left: -29px;
+            top: 28px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 3px solid var(--bg);
+            box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.22);
+        }
+
+        .experience-card {
+            padding: 27px;
+        }
+
+        .experience-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .experience-top h3 {
+            font-size: 1.2rem;
+            margin-bottom: 7px;
+        }
+
+        .company {
+            color: var(--cyan);
+            font-size: 0.9rem;
+            font-weight: 650;
+        }
+
+        .experience-date {
+            white-space: nowrap;
+            color: #c8d7fa;
+            background: rgba(91, 140, 255, 0.1);
+            border: 1px solid rgba(91, 140, 255, 0.18);
+            border-radius: 8px;
+            padding: 7px 11px;
+            font-size: 0.75rem;
+        }
+
+        .experience-card ul {
+            padding-left: 19px;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .experience-card li {
+            padding-left: 3px;
+            margin-bottom: 9px;
+        }
+
+        .experience-card li::marker {
+            color: var(--blue);
+        }
+
+        .achievement {
+            display: inline-block;
+            margin-top: 14px;
+            border-radius: 8px;
+            padding: 8px 11px;
+            background: rgba(84, 217, 232, 0.06);
+            border: 1px solid rgba(84, 217, 232, 0.16);
+            color: #9eeef0;
+            font-size: 0.79rem;
+        }
+
+        .experience-toggle {
+            margin-top: 18px;
+            color: var(--cyan);
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 750;
+        }
+
+        .extra-experience[hidden] {
+            display: none;
+        }
+
+        /* Projects */
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 255px;
+        }
+
+        .project-number {
+            font-size: 0.77rem;
+            font-weight: 800;
+            color: var(--cyan);
+            letter-spacing: 1.8px;
+            margin-bottom: 18px;
+        }
+
+        .project-card p {
+            flex: 1;
+        }
+
+        .project-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 19px;
+        }
+
+        .project-note {
+            margin-top: 22px;
+            padding: 20px 22px;
+            border: 1px dashed rgba(155, 179, 225, 0.25);
+            border-radius: 13px;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* Education */
+
+        .education-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 17px;
+        }
+
+        .education-card .icon-box {
+            flex-shrink: 0;
+        }
+
+        .education-card h3 {
+            font-size: 1.02rem;
+            margin-bottom: 9px;
+        }
+
+        .education-card p {
+            margin-bottom: 7px;
+        }
+
+        .education-status {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 0.74rem;
+            color: #c5baff;
+            background: rgba(139, 122, 255, 0.1);
+            border: 1px solid rgba(139, 122, 255, 0.2);
+            border-radius: 6px;
+            padding: 4px 8px;
+        }
+
+        /* Certifications */
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 19px;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: rgba(17, 27, 48, 0.7);
+            transition: border-color 0.25s, transform 0.25s;
+        }
+
+        .cert-item:hover {
+            border-color: rgba(91, 140, 255, 0.45);
+            transform: translateY(-3px);
+        }
+
+        .cert-icon {
+            flex-shrink: 0;
+            font-size: 1.15rem;
+            color: var(--cyan);
+        }
+
+        .cert-item h3 {
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+
+        .cert-item p {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        /* Services */
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            bottom: -45px;
+            right: -45px;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: rgba(91, 140, 255, 0.07);
+            pointer-events: none;
+        }
+
+        .service-card h3 {
+            font-size: 1.03rem;
+        }
+
+        .service-card p {
+            font-size: 0.85rem;
+        }
+
+        .cta-panel {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            padding: 35px;
+            margin-top: 35px;
+            border: 1px solid rgba(91, 140, 255, 0.25);
+            border-radius: 19px;
+            background: linear-gradient(110deg, rgba(91, 140, 255, 0.12), rgba(139, 122, 255, 0.07));
+        }
+
+        .cta-panel h3 {
+            font-size: 1.45rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-panel p {
+            color: var(--muted);
+            max-width: 640px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 28px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 19px;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: rgba(17, 27, 48, 0.68);
+            transition: border-color 0.25s;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-link:hover {
+            border-color: rgba(91, 140, 255, 0.45);
+        }
+
+        .contact-link .icon-box {
+            flex-shrink: 0;
+            margin: 0;
+            width: 42px;
+            height: 42px;
+            font-size: 1.05rem;
+        }
+
+        .contact-link h3 {
+            font-size: 0.86rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-link p {
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .contact-form {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: rgba(17, 27, 48, 0.82);
+        }
+
+        .contact-form h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-form > p {
+            color: var(--muted);
+            font-size: 0.84rem;
+            margin-bottom: 23px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+            color: #dce6fb;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid rgba(155, 179, 225, 0.19);
+            border-radius: 9px;
+            color: var(--text);
+            background: rgba(8, 13, 26, 0.7);
+            outline: none;
+            transition: border-color 0.25s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #73819e;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-help {
+            margin-top: 13px;
+            color: var(--muted);
+            font-size: 0.75rem;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+            background: rgba(5, 9, 19, 0.6);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .footer-copy {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 19px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan);
+        }
+
+        .back-top {
+            position: fixed;
+            bottom: 23px;
+            right: 23px;
+            z-index: 500;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--gradient);
+            color: white;
+            border: 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 7px 25px rgba(91, 140, 255, 0.25);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s;
+        }
+
+        .back-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Scroll reveal */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .no-js .reveal {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 1020px) {
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.76rem;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 30px;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 780px) {
+            .container {
+                width: min(100% - 32px, var(--max-width));
+            }
+
+            .section {
+                padding: 75px 0;
+            }
+
+            .nav-inner {
+                min-height: 70px;
+            }
+
+            .menu-toggle {
+                display: grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                right: 0;
+                padding: 18px 22px 23px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: rgba(8, 13, 26, 0.98);
+                border-bottom: 1px solid var(--border);
+                max-height: calc(100vh - 75px);
+                overflow-y: auto;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 11px 5px;
+                font-size: 0.9rem;
+            }
+
+            .nav-links .nav-contact {
+                text-align: center;
+                margin-top: 8px;
+            }
+
+            .hero {
+                padding: 75px 0 55px;
+                min-height: auto;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.8rem, 11vw, 4.2rem);
+                letter-spacing: -1.8px;
+            }
+
+            .hero-card-wrap {
+                max-width: 480px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .grid-2,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .experience-top {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .experience-date {
+                white-space: normal;
+            }
+
+            .cta-panel {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 27px;
+            }
+
+            .contact-grid {
+                gap: 22px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .brand-name {
+                font-size: 0.85rem;
+            }
+
+            .brand-role {
+                font-size: 0.61rem;
+            }
+
+            .brand-mark {
+                width: 39px;
+                height: 39px;
+            }
+
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            .hero-description {
+                font-size: 0.92rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .grid-3,
+            .cert-grid,
+            .about-points,
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .card,
+            .experience-card,
+            .contact-form {
+                padding: 22px;
+            }
+
+            .hero-card {
+                padding: 23px;
+            }
+
+            .section-heading {
+                margin-bottom: 30px;
+            }
+
+            .stat-card {
+                padding: 20px 10px;
+            }
+
+            .stat-card strong {
+                font-size: 1.45rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .back-top {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="no-js">
+
+    <!-- =========================================================
+         NAVIGATION
+         EDIT: Change the brand name and section links here.
+    ========================================================== -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="#home" aria-label="Go to homepage">
+                <div class="brand-mark">JM</div>
+                <div>
+                    <span class="brand-name">JAN MICHAEL ORCEJOLA</span>
+                    <span class="brand-role">Maintenance Professional</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#services">Services</a>
+                <a class="nav-contact" href="#contact">Contact Me ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =====================================================
+             HOME / HERO
+             EDIT: Update your name, title, summary, and location.
+        ====================================================== -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+
+                <div class="hero-content reveal">
+                    <div class="availability">
+                        <span class="status-dot"></span>
+                        Industrial Maintenance & Engineering
+                    </div>
+
+                    <h1>
+                        Jan Michael<br>
+                        <span class="gradient-text">Orcejola.</span>
+                    </h1>
+
+                    <p class="hero-title">
+                        Maintenance Supervisor | Planner | Technical Leader
+                    </p>
+
+                    <p class="hero-description">
+                        Experienced maintenance professional specializing in
+                        industrial equipment reliability, preventive and predictive
+                        maintenance, electrical systems, automation, instrumentation,
+                        and mechanical troubleshooting. Committed to safe operations,
+                        efficient teams, and continuous improvement.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#experience" class="btn btn-primary">
+                            Explore My Experience <span>↗</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            Let's Connect
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <span>⌖ <strong>Saudi Arabia</strong></span>
+                        <span>⚙ Industrial Maintenance</span>
+                        <span>✓ Safety & Reliability</span>
+                    </div>
+                </div>
+
+                <div class="hero-card-wrap reveal">
+                    <div class="hero-card">
+                        <!-- EDIT: Replace JM with your own initials or a photo. -->
+                        <div class="avatar">JM</div>
+
+                        <h3>Maintenance Supervisor</h3>
+                        <p>Industrial Operations · Reliability · Team Leadership</p>
+
+                        <div class="hero-stat">
+                            <span>Current Position</span>
+                            <strong>Maintenance Supervisor</strong>
+                        </div>
+
+                        <div class="hero-stat">
+                            <span>Industry Experience</span>
+                            <strong>Since 2008</strong>
+                        </div>
+
+                        <div class="hero-stat">
+                            <span>Core Focus</span>
+                            <strong>Equipment Reliability</strong>
+                        </div>
+
+                        <div class="hero-stat">
+                            <span>Current Location</span>
+                            <strong>Saudi Arabia</strong>
+                        </div>
+
+                        <div class="mini-tags">
+                            <span class="tag">PLC / Siemens</span>
+                            <span class="tag">Preventive Maintenance</span>
+                            <span class="tag">RCA</span>
+                            <span class="tag">Electrical & Mechanical</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAREER SNAPSHOT -->
+        <section class="container" aria-label="Career highlights">
+            <div class="stats reveal">
+                <div class="stat-card">
+                    <strong>18+</strong>
+                    <span>Years of Experience Since 2008</span>
+                </div>
+                <div class="stat-card">
+                    <strong>5</strong>
+                    <span>Organizations Worked With</span>
+                </div>
+                <div class="stat-card">
+                    <strong>10%</strong>
+                    <span>Reported OEE Improvement</span>
+                </div>
+                <div class="stat-card">
+                    <strong>95%</strong>
+                    <span>Reported Equipment Uptime</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             ABOUT ME
+        ====================================================== -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">About Me</span>
+                    <h2>Keeping Operations <span>Reliable.</span></h2>
+                    <p>
+                        Practical technical expertise combined with leadership,
+                        planning, and a commitment to operational excellence.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="about-copy reveal">
+                        <p class="about-intro">
+                            I am a hands-on maintenance professional with broad
+                            experience across industrial equipment, electrical
+                            and instrumentation systems, automation, mechanical
+                            works, plumbing, and building maintenance.
+                        </p>
+
+                        <p>
+                            My career spans manufacturing, mineral processing,
+                            industrial maintenance, and fuel-related operations.
+                            I have progressed from technical maintenance roles
+                            to maintenance supervision and planning, combining
+                            field troubleshooting with structured maintenance
+                            management.
+                        </p>
+
+                        <p>
+                            I believe reliable equipment starts with well-prepared
+                            people, disciplined preventive maintenance, accurate
+                            root-cause analysis, critical spare-parts availability,
+                            and consistent safety practices.
+                        </p>
+
+                        <p>
+                            My leadership approach emphasizes clear communication,
+                            effective manpower allocation, technician development,
+                            teamwork, and continuous improvement to support
+                            production targets and equipment reliability.
+                        </p>
+
+                        <div class="about-points">
+                            <div class="about-point">
+                                <span class="check">✓</span>
+                                <span>Team leadership and development</span>
+                            </div>
+                            <div class="about-point">
+                                <span class="check">✓</span>
+                                <span>Maintenance planning and scheduling</span>
+                            </div>
+                            <div class="about-point">
+                                <span class="check">✓</span>
+                                <span>Root-cause analysis and troubleshooting</span>
+                            </div>
+                            <div class="about-point">
+                                <span class="check">✓</span>
+                                <span>Safety, quality, and reliability</span>
+                            </div>
+                            <div class="about-point">
+                                <span class="check">✓</span>
+                                <span>Spare-parts and inventory coordination</span>
+                            </div>
+                            <div class="about-point">
+                                <span class="check">✓</span>
+                                <span>Cross-functional coordination</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card reveal">
+                        <h3>What I Bring to the Team</h3>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">⚙</div>
+                            <div>
+                                <h4>Technical Versatility</h4>
+                                <p>
+                                    Electrical, mechanical, instrumentation,
+                                    automation, motor controls, hydraulics,
+                                    pneumatics, and building maintenance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">◈</div>
+                            <div>
+                                <h4>Structured Maintenance</h4>
+                                <p>
+                                    Preventive and predictive maintenance,
+                                    work-order control, risk-based maintenance,
+                                    and root-cause analysis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">↗</div>
+                            <div>
+                                <h4>Performance Improvement</h4>
+                                <p>
+                                    KPI monitoring, downtime reduction,
+                                    equipment optimization, and continuous
+                                    improvement initiatives.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">♧</div>
+                            <div>
+                                <h4>People and Safety</h4>
+                                <p>
+                                    Toolbox meetings, safe work practices,
+                                    manpower scheduling, coaching, and
+                                    operational coordination.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SKILLS
+             EDIT: Add, remove, or rename skills inside the cards.
+        ====================================================== -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Technical Expertise</span>
+                    <h2>Skills & <span>Capabilities</span></h2>
+                    <p>
+                        A multidisciplinary technical background supported by
+                        hands-on troubleshooting, maintenance planning, and
+                        supervisory experience.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="card skill-card reveal">
+                        <div class="icon-box">⚡</div>
+                        <h3>Electrical Systems</h3>
+                        <ul class="skill-list">
+                            <li>Motor control wiring and installation</li>
+                            <li>Basic building wiring and installation</li>
+                            <li>Distribution and MCC panel inspections</li>
+                            <li>Periodic thermal scanning</li>
+                            <li>Substation powerline switching experience</li>
+                            <li>Electrical troubleshooting</li>
+                        </ul>
+                    </article>
+
+                    <article class="card skill-card reveal">
+                        <div class="icon-box">⌘</div>
+                        <h3>Automation & PLC</h3>
+                        <ul class="skill-list">
+                            <li>Siemens SIMATIC S7-300 / S7-400 PLC</li>
+                            <li>PLC programming and troubleshooting</li>
+                            <li>Relay logic sequence improvement</li>
+                            <li>SIMATIC WinCC HMI / DCS operation</li>
+                            <li>Control system fault diagnosis</li>
+                        </ul>
+                    </article>
+
+                    <article class="card skill-card reveal">
+                        <div class="icon-box">◉</div>
+                        <h3>Instrumentation</h3>
+                        <ul class="skill-list">
+                            <li>Temperature transmitter calibration</li>
+                            <li>Pressure and level instrumentation</li>
+                            <li>pH measurement systems</li>
+                            <li>Field instrument configuration</li>
+                            <li>Instrumentation troubleshooting</li>
+                        </ul>
+                    </article>
+
+                    <article class="card skill-card reveal">
+                        <div class="icon-box">⚙</div>
+                        <h3>Mechanical Systems</h3>
+                        <ul class="skill-list">
+                            <li>Industrial equipment maintenance</li>
+                            <li>Hydraulic and pneumatic systems</li>
+                            <li>Mechanical fault diagnosis</li>
+                            <li>Preventive maintenance execution</li>
+                            <li>Machine improvement and modification</li>
+                        </ul>
+                    </article>
+
+                    <article class="card skill-card reveal">
+                        <div class="icon-box">▦</div>
+                        <h3>Maintenance Management</h3>
+                        <ul class="skill-list">
+                            <li>Preventive and predictive maintenance</li>
+                            <li>Maintenance planning and scheduling</li>
+                            <li>Root-cause analysis (RCA)</li>
+                            <li>Work-order and KPI monitoring</li>
+                            <li>Critical spare-parts inventory control</li>
+                            <li>Team supervision and toolbox meetings</li>
+                            <li>Graymont maintenance standards experience</li>
+                        </ul>
+                    </article>
+
+                    <article class="card skill-card reveal">
+                        <div class="icon-box">✦</div>
+                        <h3>Additional Technical Skills</h3>
+                        <ul class="skill-list">
+                            <li>Forklift operation</li>
+                            <li>Basic AutoCAD</li>
+                            <li>PC technician support</li>
+                            <li>Solar photovoltaic systems</li>
+                            <li>Video and photo editing</li>
+                            <li>Drone operation</li>
+                            <li>Plumbing and building works</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+                <div style="margin-top: 35px;" class="reveal">
+                    <h3 style="font-size: 1.05rem; margin-bottom: 17px;">
+                        Core Competencies
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-pill">Team Leadership</span>
+                        <span class="skill-pill">Manpower Scheduling</span>
+                        <span class="skill-pill">Equipment Reliability</span>
+                        <span class="skill-pill">Downtime Reduction</span>
+                        <span class="skill-pill">Maintenance KPIs</span>
+                        <span class="skill-pill">Risk-Based Maintenance</span>
+                        <span class="skill-pill">Safety Compliance</span>
+                        <span class="skill-pill">ISO 9001:2015</span>
+                        <span class="skill-pill">ISO 14001:2015</span>
+                        <span class="skill-pill">Spare Parts Management</span>
+                        <span class="skill-pill">Technician Development</span>
+                        <span class="skill-pill">Continuous Improvement</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             PROFESSIONAL EXPERIENCE
+             EDIT: Add or update your employment history below.
+        ====================================================== -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Career Journey</span>
+                    <h2>Professional <span>Experience</span></h2>
+                    <p>
+                        A career built on technical problem-solving, equipment
+                        reliability, maintenance execution, and team leadership.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="experience-list">
+
+                    <!-- CURRENT POSITION -->
+                    <article class="experience-item reveal">
+                        <div class="card experience-card">
+                            <div class="experience-top">
+                                <div>
+                                    <h3>Maintenance Supervisor</h3>
+                                    <div class="company">Almajdouie & de Rijke</div>
+                                    <p class="muted" style="font-size: 0.82rem; margin-top: 5px;">
+                                        Yanbu, Saudi Arabia
+                                    </p>
+                                </div>
+                                <span class="experience-date">January 2026 – Present</span>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    Ensure the availability of maintenance support
+                                    for Product Handling Unit (PHU) equipment issues
+                                    and operational troubleshooting requirements.
+                                </li>
+                                <li>
+                                    Monitor planned work orders and ensure maintenance
+                                    activities are executed according to schedule.
+                                </li>
+                                <li>
+                                    Coordinate manpower scheduling, task assignments,
+                                    and workforce availability with planning and
+                                    operations teams.
+                                </li>
+                                <li>
+                                    Ensure scheduled preventive maintenance is completed
+                                    and coordinate risk-based maintenance activities
+                                    with the planning team.
+                                </li>
+                                <li>
+                                    Monitor maintenance performance, scheduled versus
+                                    completed activities, team KPIs, and operational
+                                    targets.
+                                </li>
+                                <li>
+                                    Lead daily toolbox meetings to communicate safety
+                                    feedback, work-schedule changes, operational
+                                    concerns, and corporate updates.
+                                </li>
+                                <li>
+                                    Conduct root-cause analysis for extended equipment
+                                    downtime and track corrective-action implementation.
+                                </li>
+                                <li>
+                                    Coordinate critical material and spare-parts
+                                    availability with the inventory specialist.
+                                </li>
+                                <li>
+                                    Ensure maintenance activities comply with the
+                                    Operational Maintenance System requirements.
+                                </li>
+                                <li>
+                                    Attend daily leadership meetings with PHU operations
+                                    and support technicians during complex troubleshooting,
+                                    lessons learned, and reliability discussions.
+                                </li>
+                            </ul>
+
+                            <span class="achievement">
+                                Focus: Safe operations, maintenance execution, and KPI performance
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- PREVIOUS SUPERVISORY ROLE -->
+                    <article class="experience-item reveal">
+                        <div class="card experience-card">
+                            <div class="experience-top">
+                                <div>
+                                    <h3>Maintenance Supervisor / Planner</h3>
+                                    <div class="company">Graymont Philippines Inc.</div>
+                                    <p class="muted" style="font-size: 0.82rem; margin-top: 5px;">
+                                        Palawan, Philippines
+                                    </p>
+                                </div>
+                                <span class="experience-date">January 2016 – December 2025</span>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    Led the maintenance team to improve workforce
+                                    efficiency, equipment reliability, and asset
+                                    performance.
+                                </li>
+                                <li>
+                                    Conducted training and skills development to
+                                    strengthen technical capabilities and reduce
+                                    equipment downtime.
+                                </li>
+                                <li>
+                                    Developed and implemented maintenance programs
+                                    covering electrical, mechanical, and
+                                    instrumentation systems.
+                                </li>
+                                <li>
+                                    Established preventive and predictive maintenance
+                                    schedules to reduce unplanned maintenance activities.
+                                </li>
+                                <li>
+                                    Managed annual maintenance budgets, optimizing
+                                    expenditures while supporting equipment reliability.
+                                </li>
+                                <li>
+                                    Coordinated critical spare-parts availability to
+                                    minimize breakdown-related production interruptions.
+                                </li>
+                                <li>
+                                    Conducted root-cause analysis for major downtime
+                                    events and implemented corrective actions to
+                                    improve mean time between failures (MTBF).
+                                </li>
+                                <li>
+                                    Prepared monthly maintenance performance reports
+                                    to support transparency and management decisions.
+                                </li>
+                            </ul>
+
+                            <span class="achievement">
+                                Reported results: 10% OEE improvement and 95% equipment uptime
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- EARLIER EXPERIENCE -->
+                    <article class="experience-item reveal">
+                        <div class="card experience-card">
+                            <div class="experience-top">
+                                <div>
+                                    <h3>Maintenance Engineer</h3>
+                                    <div class="company">Unichamp Mineral Philippines</div>
+                                    <p class="muted" style="font-size: 0.82rem; margin-top: 5px;">
+                                        Laguna, Philippines
+                                    </p>
+                                </div>
+                                <span class="experience-date">August 2014 – December 2015</span>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    Designed and executed maintenance plans for critical
+                                    machinery to support operational efficiency.
+                                </li>
+                                <li>
+                                    Supported compliance with ISO 9001:2015 and
+                                    ISO 14001:2015 through documentation and audit activities.
+                                </li>
+                                <li>
+                                    Conducted preventive maintenance to reduce equipment
+                                    failures and unplanned interruptions.
+                                </li>
+                                <li>
+                                    Monitored critical spare-parts inventory to maintain
+                                    availability at the site.
+                                </li>
+                                <li>
+                                    Supervised troubleshooting of mechanical, electrical,
+                                    instrumentation, and DCS-related equipment failures.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <div id="extraExperience" class="extra-experience" hidden>
+
+                        <article class="experience-item reveal">
+                            <div class="card experience-card">
+                                <div class="experience-top">
+                                    <div>
+                                        <h3>Electrical Assistant</h3>
+                                        <div class="company">WOQOD – Qatar Fuel</div>
+                                        <p class="muted" style="font-size: 0.82rem; margin-top: 5px;">
+                                            Doha, Qatar
+                                        </p>
+                                    </div>
+                                    <span class="experience-date">January 2013 – April 2014</span>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        Assisted in the installation, troubleshooting,
+                                        inspection, and maintenance of fuel-station
+                                        electrical systems.
+                                    </li>
+                                    <li>
+                                        Supported the availability of automatic tanker
+                                        washing-bay equipment for scheduled operations.
+                                    </li>
+                                    <li>
+                                        Performed preventive maintenance on automatic
+                                        tanker washer equipment.
+                                    </li>
+                                    <li>
+                                        Conducted inspections and maintenance activities
+                                        in line with applicable operational requirements.
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="experience-item reveal">
+                            <div class="card experience-card">
+                                <div class="experience-top">
+                                    <div>
+                                        <h3>Maintenance – Equipment Engineering Technician</h3>
+                                        <div class="company">OPTODEV Inc.</div>
+                                        <p class="muted" style="font-size: 0.82rem; margin-top: 5px;">
+                                            Laguna, Philippines
+                                        </p>
+                                    </div>
+                                    <span class="experience-date">January 2010 – December 2011</span>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        Maintained and repaired electronic and mechanical
+                                        equipment to minimize production downtime.
+                                    </li>
+                                    <li>
+                                        Implemented machine improvements and modifications
+                                        to enhance equipment functionality.
+                                    </li>
+                                    <li>
+                                        Tracked breakdowns, investigated faulty components,
+                                        and monitored corrective actions.
+                                    </li>
+                                    <li>
+                                        Collaborated with cross-functional teams to
+                                        improve equipment reliability and performance.
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="experience-item reveal">
+                            <div class="card experience-card">
+                                <div class="experience-top">
+                                    <div>
+                                        <h3>Production Line Maintenance</h3>
+                                        <div class="company">TAKATA Philippines Corporation</div>
+                                        <p class="muted" style="font-size: 0.82rem; margin-top: 5px;">
+                                            Laguna, Philippines
+                                        </p>
+                                    </div>
+                                    <span class="experience-date">April 2008 – December 2009</span>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        Maintained and repaired airbag manufacturing
+                                        equipment to support production quality and
+                                        equipment availability.
+                                    </li>
+                                    <li>
+                                        Implemented machine functionality improvements
+                                        and monitored results for feedback.
+                                    </li>
+                                    <li>
+                                        Participated in the Machine Improvement and
+                                        Modification Team to enhance equipment performance.
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;" class="reveal">
+                    <button class="btn btn-outline" id="experienceToggle"
+                            type="button" aria-expanded="false"
+                            aria-controls="extraExperience">
+                        View Earlier Experience ↓
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             PROJECTS
+             EDIT: No formal projects were supplied. These are
+             capability areas, not claims of specific completed jobs.
+             Replace with verified projects when available.
+        ====================================================== -->
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Technical Portfolio</span>
+                    <h2>Projects & <span>Focus Areas</span></h2>
+                    <p>
+                        Areas of technical work and improvement aligned with
+                        my maintenance background. Specific project case studies
+                        can be added as they become available.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card project-card reveal">
+                        <div class="project-number">AREA 01 / RELIABILITY</div>
+                        <div class="icon-box">⚙</div>
+                        <h3>Preventive Maintenance Optimization</h3>
+                        <p>
+                            Maintenance planning, work-order scheduling, inspection
+                            routines, and preventive maintenance execution to support
+                            equipment availability and minimize unplanned downtime.
+                        </p>
+                        <div class="project-footer">
+                            <span class="tag">PM Planning</span>
+                            <span class="tag">Reliability</span>
+                            <span class="tag">KPIs</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-number">AREA 02 / AUTOMATION</div>
+                        <div class="icon-box">⌘</div>
+                        <h3>PLC & Control System Troubleshooting</h3>
+                        <p>
+                            Technical troubleshooting involving Siemens PLCs,
+                            WinCC HMI, motor control circuits, relay logic, and
+                            industrial control systems.
+                        </p>
+                        <div class="project-footer">
+                            <span class="tag">Siemens PLC</span>
+                            <span class="tag">HMI</span>
+                            <span class="tag">Controls</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-number">AREA 03 / INSTRUMENTATION</div>
+                        <div class="icon-box">◉</div>
+                        <h3>Field Instrument Maintenance</h3>
+                        <p>
+                            Inspection, configuration, calibration, and
+                            troubleshooting of industrial transmitters and
+                            instrumentation used in process monitoring.
+                        </p>
+                        <div class="project-footer">
+                            <span class="tag">Calibration</span>
+                            <span class="tag">Transmitters</span>
+                            <span class="tag">Process Systems</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-number">AREA 04 / IMPROVEMENT</div>
+                        <div class="icon-box">↗</div>
+                        <h3>Root-Cause Analysis & Downtime Reduction</h3>
+                        <p>
+                            Investigation of recurring failures, corrective-action
+                            follow-up, and team discussions to improve equipment
+                            performance and reduce repeat breakdowns.
+                        </p>
+                        <div class="project-footer">
+                            <span class="tag">RCA</span>
+                            <span class="tag">MTBF</span>
+                            <span class="tag">Continuous Improvement</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-number">AREA 05 / TEAM LEADERSHIP</div>
+                        <div class="icon-box">♧</div>
+                        <h3>Maintenance Team Coordination</h3>
+                        <p>
+                            Manpower allocation, toolbox meetings, technical coaching,
+                            operational coordination, and maintenance performance
+                            monitoring.
+                        </p>
+                        <div class="project-footer">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Safety</span>
+                            <span class="tag">Planning</span>
+                        </div>
+                    </article>
+
+                    <article class="card project-card reveal">
+                        <div class="project-number">AREA 06 / ENERGY</div>
+                        <div class="icon-box">☀</div>
+                        <h3>Solar PV & Electrical Installation</h3>
+                        <p>
+                            Additional technical capability in solar photovoltaic
+                            systems, electrical installation, basic wiring, and
+                            small-scale lighting applications.
+                        </p>
+                        <div class="project-footer">
+                            <span class="tag">Solar PV</span>
+                            <span class="tag">Electrical</span>
+                            <span class="tag">Installation</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="project-note reveal">
+                    <strong style="color: var(--text);">Portfolio note:</strong>
+                    These cards describe professional focus areas, not independently
+                    verified project case studies. Replace them with actual project
+                    names, equipment details, photographs, and measurable results
+                    when you are ready to publish them.
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Academic Background</span>
+                    <h2>Education & <span>Training</span></h2>
+                    <p>
+                        An academic foundation in industrial automation,
+                        control engineering, and mechatronics.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="grid-2">
+                    <article class="card education-card reveal">
+                        <div class="icon-box">🎓</div>
+                        <div>
+                            <h3>Bachelor of Science in Industrial Automation & Mechatronics</h3>
+                            <p>Mindanao State University</p>
+                            <p class="muted">Iligan City, Philippines</p>
+                            <span class="education-status">Undergraduate</span>
+                        </div>
+                    </article>
+
+                    <article class="card education-card reveal">
+                        <div class="icon-box">📘</div>
+                        <div>
+                            <h3>Diploma in Industrial Automation & Control Engineering Technology</h3>
+                            <p>Mindanao State University</p>
+                            <p class="muted">Iligan City, Philippines</p>
+                            <span class="education-status">Graduate</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CERTIFICATIONS
+             EDIT: Update dates or add certificate details as needed.
+        ====================================================== -->
+        <section class="section section-alt" id="certifications">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Professional Development</span>
+                    <h2>Certifications & <span>Courses</span></h2>
+                    <p>
+                        Technical training supporting electrical installation,
+                        maintenance, solar lighting, and plumbing work.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="cert-grid">
+
+                    <article class="cert-item reveal">
+                        <div class="cert-icon">✦</div>
+                        <div>
+                            <h3>Packaged Air Conditioner Unit Servicing</h3>
+                            <p>April 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-item reveal">
+                        <div class="cert-icon">✦</div>
+                        <div>
+                            <h3>Introduction to Electrical Installation and Maintenance</h3>
+                            <p>April 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-item reveal">
+                        <div class="cert-icon">✦</div>
+                        <div>
+                            <h3>
+                                Installing Electrical Protective Devices for Distribution,
+                                Power, Lightning Protection, and Grounding Systems
+                            </h3>
+                            <p>April 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-item reveal">
+                        <div class="cert-icon">✦</div>
+                        <div>
+                            <h3>Solar Night Light Assembly</h3>
+                            <p>May 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-item reveal">
+                        <div class="cert-icon">✦</div>
+                        <div>
+                            <h3>Introduction to Plumbing</h3>
+                            <p>May 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-item reveal">
+                        <div class="cert-icon">◷</div>
+                        <div>
+                            <h3>
+                                Performing Roughing-In Activities, Wiring, and Cabling
+                                Works for Single-Phase Distribution, Power, Lighting,
+                                and Auxiliary Systems
+                            </h3>
+                            <p>In progress</p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="muted reveal" style="font-size: 0.8rem; margin-top: 19px;">
+                    Certificate titles and dates are presented as supplied.
+                    Add issuing institutions, credential numbers, or verification
+                    links if you want to display them publicly.
+                </p>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SERVICES
+             EDIT: These are service capabilities. Keep only the
+             services you are qualified and authorized to offer.
+        ====================================================== -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">How I Can Contribute</span>
+                    <h2>Professional <span>Services</span></h2>
+                    <p>
+                        Maintenance leadership and technical support for
+                        organizations seeking reliable equipment, better planning,
+                        and more effective maintenance execution.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="card service-card reveal">
+                        <div class="icon-box">⚙</div>
+                        <h3>Maintenance Supervision</h3>
+                        <p>
+                            Team coordination, manpower scheduling, work assignment,
+                            safety talks, performance tracking, and technician support.
+                        </p>
+                    </article>
+
+                    <article class="card service-card reveal">
+                        <div class="icon-box">▦</div>
+                        <h3>Maintenance Planning</h3>
+                        <p>
+                            Preventive maintenance scheduling, work-order follow-up,
+                            spare-parts coordination, and maintenance KPI monitoring.
+                        </p>
+                    </article>
+
+                    <article class="card service-card reveal">
+                        <div class="icon-box">⌘</div>
+                        <h3>Industrial Troubleshooting</h3>
+                        <p>
+                            Electrical, automation, instrumentation, motor control,
+                            and mechanical fault diagnosis within the appropriate
+                            safety and authorization requirements.
+                        </p>
+                    </article>
+
+                    <article class="card service-card reveal">
+                        <div class="icon-box">◉</div>
+                        <h3>Instrumentation Support</h3>
+                        <p>
+                            Field instrument inspection, calibration, configuration,
+                            and troubleshooting for relevant process measurement systems.
+                        </p>
+                    </article>
+
+                    <article class="card service-card reveal">
+                        <div class="icon-box">↗</div>
+                        <h3>Reliability Improvement</h3>
+                        <p>
+                            Root-cause analysis, corrective-action tracking, recurring
+                            failure reviews, and equipment performance improvement.
+                        </p>
+                    </article>
+
+                    <article class="card service-card reveal">
+                        <div class="icon-box">✦</div>
+                        <h3>Technical Support & Documentation</h3>
+                        <p>
+                            Maintenance reporting, technical documentation, basic
+                            AutoCAD support, and video or photo editing for
+                            appropriate technical communication needs.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="cta-panel reveal">
+                    <div>
+                        <h3>Looking for a dedicated maintenance professional?</h3>
+                        <p>
+                            I am willing to attend job interviews and discuss
+                            opportunities where my technical experience, planning
+                            abilities, and leadership skills can support your team.
+                        </p>
+                    </div>
+                    <a class="btn btn-primary" href="#contact">
+                        Discuss an Opportunity ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CONTACT
+             EDIT: Your email and LinkedIn profile are below.
+             The contact form uses the visitor's email application;
+             this standalone HTML file has no backend server.
+        ====================================================== -->
+        <section class="section section-alt" id="contact">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Get In Touch</span>
+                    <h2>Let's Start a <span>Conversation</span></h2>
+                    <p>
+                        For job opportunities, maintenance leadership positions,
+                        professional networking, or technical collaboration,
+                        feel free to contact me.
+                    </p>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+
+                        <a class="contact-link" href="mailto:jmorcejola@gmail.com">
+                            <div class="icon-box">✉</div>
+                            <div>
+                                <h3>Email Address</h3>
+                                <p>jmorcejola@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a class="contact-link"
+                           href="https://www.linkedin.com/in/jan-michael-orcejola-a37298a0"
+                           target="_blank" rel="noopener noreferrer">
+                            <div class="icon-box">in</div>
+                            <div>
+                                <h3>LinkedIn Profile</h3>
+                                <p>Connect with me professionally ↗</p>
+                            </div>
+                        </a>
+
+                        <div class="contact-link">
+                            <div class="icon-box">⌖</div>
+                            <div>
+                                <h3>Current Location</h3>
+                                <p>Kingdom of Saudi Arabia</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-link">
+                            <div class="icon-box">◷</div>
+                            <div>
+                                <h3>Professional Interest</h3>
+                                <p>Maintenance Supervisor · Maintenance Planner · Reliability</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-form reveal">
+                        <h3>Send an Inquiry</h3>
+                        <p>
+                            Fill out the form to prepare an email addressed
+                            directly to me.
+                        </p>
+
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="visitorName">Your Name</label>
+                                    <input type="text" id="visitorName"
+                                           name="visitorName"
+                                           placeholder="Enter your name"
+                                           autocomplete="name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="visitorEmail">Your Email</label>
+                                    <input type="email" id="visitorEmail"
+                                           name="visitorEmail"
+                                           placeholder="you@example.com"
+                                           autocomplete="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="visitorSubject">Subject</label>
+                                <input type="text" id="visitorSubject"
+                                       name="visitorSubject"
+                                       placeholder="Job opportunity / Professional inquiry"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="visitorMessage">Message</label>
+                                <textarea id="visitorMessage"
+                                          name="visitorMessage"
+                                          placeholder="Write your message here..."
+                                          required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Prepare Email ↗
+                            </button>
+
+                            <p class="form-help">
+                                This form opens your default email application.
+                                It does not send or store messages on its own.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer>
+        <div class="container footer-inner">
+            <div>
+                <a class="brand" href="#home">
+                    <div class="brand-mark">JM</div>
+                    <div>
+                        <span class="brand-name">JAN MICHAEL ORCEJOLA</span>
+                        <span class="brand-role">Maintenance Supervisor</span>
+                    </div>
+                </a>
+
+                <p class="footer-copy" style="margin-top: 14px;">
+                    © <span id="currentYear"></span> Jan Michael Orcejola.
+                    All rights reserved.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.linkedin.com/in/jan-michael-orcejola-a37298a0"
+                   target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backTop" class="back-top" type="button"
+            aria-label="Back to top" title="Back to top">↑</button>
+
+    <script>
+        /* =========================================================
+           VANILLA JAVASCRIPT
+           All interactions work directly in the browser.
+        ========================================================= */
+
+        document.body.classList.remove("no-js");
+
+        // MOBILE NAVIGATION
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Close the mobile menu after selecting a section.
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        // SHOW / HIDE EARLIER PROFESSIONAL EXPERIENCE
+        const experienceToggle = document.getElementById("experienceToggle");
+        const extraExperience = document.getElementById("extraExperience");
+
+        experienceToggle.addEventListener("click", function () {
+            const isHidden = extraExperience.hidden;
+
+            extraExperience.hidden = !isHidden;
+            experienceToggle.setAttribute("aria-expanded", String(isHidden));
+            experienceToggle.textContent = isHidden
+                ? "Hide Earlier Experience ↑"
+                : "View Earlier Experience ↓";
+
+            // Reveal newly displayed content.
+            if (isHidden) {
+                extraExperience.querySelectorAll(".reveal").forEach(function (item) {
+                    item.classList.add("visible");
+                });
+            }
+        });
+
+        // SCROLL REVEAL ANIMATIONS
+        // If IntersectionObserver is unsupported, show all content.
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const revealObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.08,
+                rootMargin: "0px 0px -25px 0px"
+            });
+
+            revealElements.forEach(function (element) {
+                revealObserver.observe(element);
+            });
+        } else {
+            revealElements.forEach(function (element) {
+                element.classList.add("visible");
+            });
+        }
+
+        // ACTIVE NAVIGATION LINK BASED ON VISIBLE SECTION
+        const sections = document.querySelectorAll("main section[id]");
+        const sectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        if ("IntersectionObserver" in window) {
+            const sectionObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        sectionLinks.forEach(function (link) {
+                            link.classList.toggle(
+                                "active",
+                                link.getAttribute("href") === "#" + entry.target.id
+                            );
+                        });
+                    }
+                });
+            }, {
+                rootMargin: "-25% 0px -60% 0px"
+            });
+
+            sections.forEach(function (section) {
+                sectionObserver.observe(section);
+            });
+        }
+
+        // BACK-TO-TOP BUTTON
+        const backTop = document.getElementById("backTop");
+
+        window.addEventListener("scroll", function () {
+            backTop.classList.toggle("visible", window.scrollY > 500);
+        }, { passive: true });
+
+        backTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                    ? "auto"
+                    : "smooth"
+            });
+        });
+
+        // AUTOMATIC FOOTER YEAR
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+        // CONTACT FORM
+        // A standalone HTML file cannot deliver messages without a backend.
+        // This prepares a message in the visitor's default email application.
+        // EDIT: Change the recipient below if your email address changes.
+        const portfolioEmail = "jmorcejola@gmail.com";
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const visitorName = document.getElementById("visitorName").value.trim();
+            const visitorEmail = document.getElementById("visitorEmail").value.trim();
+            const visitorSubject = document.getElementById("visitorSubject").value.trim();
+            const visitorMessage = document.getElementById("visitorMessage").value.trim();
+
+            if (!visitorName || !visitorEmail || !visitorSubject || !visitorMessage) {
+                alert("Please complete all fields before preparing your email.");
+                return;
+            }
+
+            const emailSubject = encodeURIComponent(visitorSubject);
+            const emailBody = encodeURIComponent(
+                "Hello Jan Michael,\n\n" +
+                visitorMessage +
+                "\n\nBest regards,\n" +
+                visitorName +
+                "\nReply email: " +
+                visitorEmail
+            );
+
+            const mailtoLink =
+                "mailto:" + portfolioEmail +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
+
+            // Open the visitor's email client.
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+</body>
+</html>
+```
